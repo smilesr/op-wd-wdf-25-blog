@@ -1,10 +1,8 @@
-<h1> Article </h1>
-
-<%= @article.title %>
+<h1> <%= @article.title %> </h1>
 <p>
   Tags:
   <% @article.tags.each do |tag| %>
-    <%= link_to tag.name, tag_path(tag) %>
+    <%= link_to tag.name, tag_path(tag), class: "embolden" %>
   <% end %>
 </p>
 <p>
@@ -14,8 +12,8 @@
 <%= @article.body %>
 <p> Posted <%= distance_of_time_in_words(@article.created_at, Time.now) %> ago </p> 
 <% if logged_in? %>
-<%= link_to "Edit", edit_article_path(@article) %>
-<%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "Really delete the article?"} %>
+<%= link_to "Edit", edit_article_path(@article), class: "embolden" %>
+<%= link_to "Delete", article_path(@article), method: :delete, class: "embolden", data: {confirm: "Really delete the article?"} %>
 <% end %>
 <h3> Comments (<%= @count %>) </h3>
 <%= render partial: 'articles/comment', collection: @article.comments %>

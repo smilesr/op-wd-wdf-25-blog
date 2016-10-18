@@ -1,4 +1,4 @@
-<h1> Articles tagged with <%= @tag.name %> </h1>
+<h1> Posts with a "<%= @tag.name %>" tag </h1>
 
 <ul>
   <% @tag.articles.each do |article| %>
@@ -9,4 +9,4 @@
     <% end %>
 </ul>
 
-<%= link_to "See All Tags", tags_path %>
+<%= link_to "To tags page", tags_path %>
