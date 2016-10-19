@@ -1,9 +1,7 @@
-<h1> Used Tags </h1>
+<h1> Tags from Posts </h1>
 
 <% @tags.each do |tag| %>
 <%= link_to tag.name, tag_path(tag)  %> <br />
 
 
 <% end %>
-
-<%= link_to "See all posts", articles_path %>

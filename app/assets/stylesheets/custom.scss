@@ -1,2 +1,70 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+html, body { height:100%; margin:0; padding:0; }
+
+html {
+  font-size: 62.5%; 
+}
+.back_button {
+  display: inline;
+
+}
+
+
+a {
+  color: black;
+}
+a:hover {
+  background:rgba(0,0,0,0.3);
+  text-decoration: none;
+}
+.back_button > a {
+    background: black;
+}
+.back_button > a:hover {
+    background:rgba(0,0,0,0.3);
+}
+#sidebar {
+  background: #638ca6;
+  min-height: 1200px;
+  height: 100%;
+  border-top-left-radius: 1em;
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  h4 {
+    padding-top: 3em;
+  }
+}
+
+#main_content {
+  background: #88c9ce;
+  min-height: 1200px;
+  height: 100%;
+  border-top-right-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+}
+
+#wrapper {
+ 
+}
+
+.post_container{
+}
+.new_comment {
+
+    
+}
+.comment_container {
+  overflow: auto;
+
+}
